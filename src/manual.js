@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import "./stylesheets/Game.css";
+import { connect } from 'react-redux';
 
 class Manual extends Component {
 
   render() {
+    const { user } = this.props;
     return (
       <div className = "manualbody">
         <h1 >How to play Coda:</h1>
@@ -37,5 +39,10 @@ class Manual extends Component {
   }
 }
 
-
-  export default Manual;
+const mapStateToProps = (state) => {
+  const { user } = state.login;
+  return {
+    user,
+  };
+}
+export default connect(mapStateToProps)(Manual);

@@ -10,6 +10,7 @@ import LoginPage from './LoginPage';
 import RegisterPage from './RegisterPage';
 import { alertActions } from './actions/alerts';
 import { connect } from 'react-redux';
+import PrivateRoute from './utils/routes';
 
 class App extends Component {
   constructor(props) {
@@ -35,7 +36,7 @@ class App extends Component {
             }
             <Switch>
               <Route exact path="/" component={Game} />
-              <Route path="/manual" component={Manual} />
+              <PrivateRoute path="/manual" component={Manual} />
               <Route path="/leaderboard" component={LeaderBoard} />
               <Route path="/login" component={LoginPage} />
               <Route path="/registration" component={RegisterPage} />

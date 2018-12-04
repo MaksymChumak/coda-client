@@ -14,14 +14,12 @@ function login(username, password) {
     };
     return fetch(`${apiUrl}/login`, requestOptions)
         .then(handleResponse)
-        .then(user => {
+        .then(response => {
             // login successful if there's a jwt token in the response
-            if (user.token) {
-              console.log("Token!")
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
-                localStorage.setItem('user', JSON.stringify(user));
+            if (response.user.token) {
+                localStorage.setItem('user', JSON.stringify(response.user));
             }
-            return user;
+            return response.user;
         });
 }
 
@@ -44,7 +42,7 @@ function register(user) {
 function handleResponse(response) {
   console.log(response)
     return response.text().then(text => {
-        const data = text;
+        const data = text && JSON.parse(text);
         if (!response.ok) {
             if (response.status === 400) {
                 // auto logout if 400 response returned from api
