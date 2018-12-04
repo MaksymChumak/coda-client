@@ -35,8 +35,8 @@ class App extends Component {
               <div className={`alert ${alert.type}`}>{alert.message}</div>
             }
             <Switch>
-              <Route exact path="/" component={Game} />
-              <PrivateRoute path="/manual" component={Manual} />
+              <Route exact path="/" component={Manual} />
+              <PrivateRoute path="/game" component={Game} />
               <Route path="/leaderboard" component={LeaderBoard} />
               <Route path="/login" component={LoginPage} />
               <Route path="/registration" component={RegisterPage} />

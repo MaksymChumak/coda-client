@@ -1,31 +1,47 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import "./stylesheets/header.css";
+import { connect } from 'react-redux';
+import { logout } from './actions/user';
 
 class NavBar extends React.Component {
-
 
   render() {
     return (
       <div>
-        <header class="header-fixed">
-          <div class="header-limiter">
+        {console.log(this.props)}
+        <header className="header-fixed">
+          <div className="header-limiter">
             <div className = "logo">CODA</div>
             <nav>
-              <Link to="/">Game</Link>
+
+              <Link to="/">Manual</Link>
               <Link to="/leaderboard">Leaderboard </Link>
-              <Link to="/manual">Manual</Link>
-              <Link to="/login">Login</Link>
+              {this.props.user ? (
+              <Link to="/game">Game</Link>
+              ) : (
               <Link to="/registration">Register</Link>
+              )}
+              {this.props.user ? (
+              <Link to="/" onClick={() => this.props.dispatch(logout())}>Log Out</Link>
+              ) : (
+              <Link to="/login">Login</Link>
+              )}
             </nav>
           </div>
         </header>
-        <div class="header-fixed-placeholder"></div>
+        <div className="header-fixed-placeholder"></div>
       </div>
     );
   }
 }
 
 
+const mapStateToProps = (state) => {
+  const { user } = state.login;
+  return {
+    user,
+  };
+}
 
-export default NavBar;
+export default connect(mapStateToProps)(NavBar);

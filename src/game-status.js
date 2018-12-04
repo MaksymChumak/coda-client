@@ -21,11 +21,12 @@ class GameStatus extends Component {
     };
   }
   /* renderStart */
+  // here
   renderStart = () => {
     return (
       <div className="gameStatusStart">
         <div className="msg1">
-          Welcome {this.props.states.playerStatus.userName}!
+          Welcome {this.props.backend_user.username}!
         </div>
         <div className="msg2">
           Click <strong>Start</strong> to play{" "}

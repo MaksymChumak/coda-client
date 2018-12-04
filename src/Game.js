@@ -6,6 +6,7 @@ import PlayerDeck from "./playerDeck.js";
 import ComputerDeck from "./computerDeck.js";
 import Card from "./card.js";
 import Axios from "axios";
+import { connect } from 'react-redux';
 
 class Game extends Component {
   constructor(props) {
@@ -471,7 +472,6 @@ class Game extends Component {
   render = () => {
     return (
       <div className="App">
-
         <ComputerDeck
           isPlayerTurn={this.state.isPlayerTurn}
           selectCard={cardName => this.selectCard(cardName)}
@@ -483,6 +483,7 @@ class Game extends Component {
 
         <GameStatus
           states={this.state}
+          backend_user={this.props.user}
           gameBegin={() => this.setUp()}
           reset={() => this.resetGame()}
           dealBlack={() => this.dealBlack()}
@@ -506,4 +507,11 @@ class Game extends Component {
   };
 }
 
-export default Game;
+const mapStateToProps = (state) => {
+  const { user } = state.login;
+  return {
+    user,
+  };
+}
+
+export default connect(mapStateToProps)(Game);
