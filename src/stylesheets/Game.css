@@ -8,7 +8,7 @@
   background-size: cover;
   width: 100vw;
   height: 100vh;
-  filter: opacity(0.88)
+  filter: opacity(0.88);
 }
 
 
@@ -578,7 +578,7 @@
   height:calc(95%/4);
   width:100vw;
   position: absolute;
-  bottom:0;
+  bottom: 35px;
   /* width: 100%;
   height: 100%; */
   display: flex;

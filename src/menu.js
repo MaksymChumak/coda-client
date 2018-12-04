@@ -17,7 +17,6 @@ export default class Menu extends Component {
         // make a axios request to the server
         //  to get a list of playerStatus e.g.[{name:, wins:, loses:}, {},{}...]
         Axios.get("urlgoeshere/players").then(res=>{
-            console.log(res)
             this.setState({
                 players:res.data
             });
@@ -25,7 +24,7 @@ export default class Menu extends Component {
     }
 
     render(){
-        
+
         let { wins, loses } = this.props.playerStatus;
         let total = wins + loses;
 
@@ -37,7 +36,7 @@ export default class Menu extends Component {
                 <div>
                 win_rate: {total ? (wins / total) * 100 : 0} %
                 </div>
-                <LeaderBoard 
+                <LeaderBoard
                     players={this.state.players}
                 />
                 <Manual />

@@ -40,7 +40,6 @@ function register(user) {
 
 // return user in login
 function handleResponse(response) {
-  console.log(response)
     return response.text().then(text => {
         const data = text && JSON.parse(text);
         if (!response.ok) {

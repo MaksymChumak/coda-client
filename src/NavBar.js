@@ -9,7 +9,6 @@ class NavBar extends React.Component {
   render() {
     return (
       <div>
-        {console.log(this.props)}
         <header className="header-fixed">
           <div className="header-limiter">
             <div className = "logo">CODA</div>

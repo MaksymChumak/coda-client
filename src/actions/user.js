@@ -44,7 +44,7 @@ export const register = (user) => {
                 dispatch(alertActions.success('Registration successful'));
             },
             error => {
-                dispatch(alertActions.error("Username is invalid or allready taken"));
+                dispatch(alertActions.error("Username is invalid or already taken"));
                 dispatch(failure(error.toString()));
             }
         );
