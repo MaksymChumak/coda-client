@@ -12,11 +12,11 @@ export const login = (username, password) => {
             .then(
                 user => {
                     dispatch(success(user));
-                    history.push('/');
+                    history.push('/manual');
                     dispatch(alertActions.success('Login successful'));
                 },
                 error => {
-                    dispatch(alertActions.error(error.toString()));
+                    dispatch(alertActions.error("Username and password doesn't match"));
                     dispatch(failure(error.toString()));
                 }
             );
@@ -40,10 +40,11 @@ export const register = (user) => {
         .then(
             user => {
                 dispatch(success());
-                history.push('/');
+                history.push('/login');
                 dispatch(alertActions.success('Registration successful'));
             },
             error => {
+                dispatch(alertActions.error("Username is invalid or allready taken"));
                 dispatch(failure(error.toString()));
             }
         );

@@ -1,0 +1,13 @@
+
+.container-welcome {
+  position: fixed;
+  width: 50vw;
+  height: 50vh;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  text-align: left;
+}
+

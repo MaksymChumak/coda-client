@@ -36,7 +36,7 @@ class RegisterPage extends React.Component {
         this.setState({ submitted: true });
         const { user } = this.state;
         const { dispatch } = this.props;
-        if (user.username && user.password) {
+        if (user.username && user.password && user.password.length >= 6) {
             dispatch(register(user));
         }
     }
@@ -56,6 +56,9 @@ class RegisterPage extends React.Component {
                 <input placeholder="password" className="password" name="password" onChange={this.handleChange} />
                 {submitted && !user.password &&
                   <div className="help-block">Password is required</div>
+                }
+                {submitted && !(user.password.length >= 6) &&
+                  <div className="help-block">Password must contain at least 6 symbols</div>
                 }
                 <button className="log-in">Register</button>
               </form>

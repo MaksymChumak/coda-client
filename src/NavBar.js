@@ -15,7 +15,8 @@ class NavBar extends React.Component {
             <div className = "logo">CODA</div>
             <nav>
 
-              <Link to="/">Manual</Link>
+              <Link to="/">Welcome</Link>
+              <Link to="/manual">Manual</Link>
               <Link to="/leaderboard">Leaderboard </Link>
               {this.props.user ? (
               <Link to="/game">Game</Link>

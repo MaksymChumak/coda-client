@@ -22,61 +22,61 @@ export default class LeaderBoard extends Component {
           <div id="bg"></div>
           <div className="leaderboard-container">
             <div className="row-header">
-              <div class="row">
-                <div class="col">
+              <div className="row">
+                <div className="col">
                   <p>User Name</p>
                 </div>
-                <div class="col">
+                <div className="col">
                   <p>Winstreak</p>
                 </div>
               </div>
 
             </div>
-            <div class="row">
-              <div class="col">
+            <div className="row">
+              <div className="col">
                 <p>Kahoot.json</p>
               </div>
-              <div class="col">
+              <div className="col">
                 <p>9999</p>
               </div>
             </div>
-            <div class="row">
-              <div class="col">
+            <div className="row">
+              <div className="col">
+                <p>Secondplace.json</p>
+              </div>
+              <div className="col">
+                <p>8888</p>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <p>Thirdplace.json</p>
+              </div>
+              <div className="col">
+                <p>7777</p>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
                 <p>HELLO</p>
               </div>
-              <div class="col">
+              <div className="col">
                 <p>HELLO</p>
               </div>
             </div>
-            <div class="row">
-              <div class="col">
+            <div className="row">
+              <div className="col">
                 <p>HELLO</p>
               </div>
-              <div class="col">
-                <p>HELLO</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <p>HELLO</p>
-              </div>
-              <div class="col">
+              <div className="col">
                 <p>HELLO</p>
               </div>
             </div>
-            <div class="row">
-              <div class="col">
+            <div className="row">
+              <div className="col">
                 <p>HELLO</p>
               </div>
-              <div class="col">
-                <p>HELLO</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <p>HELLO</p>
-              </div>
-              <div class="col">
+              <div className="col">
                 <p>HELLO</p>
               </div>
             </div>

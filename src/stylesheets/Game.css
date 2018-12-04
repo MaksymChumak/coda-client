@@ -3,7 +3,7 @@
 /* main */
 
 .App {
-  background: url('./matrix.png') no-repeat fixed center; 
+  background: url('./matrix.png') no-repeat fixed center;
   position: fixed;
   background-size: cover;
   width: 100vw;
@@ -29,12 +29,12 @@
 .manualContainer:hover {
   background-color: deeppink;
   color:white;
-  
+
 }
 
 .stress {
   font-weight: 700;
-  color: deeppink;
+  color: #be5857;
 }
 
 
@@ -62,7 +62,7 @@
 /* computerDeck */
 .computerDeck {
   height:calc(95%/4);
-  
+
 }
 
 .computerDeckContainer {
@@ -85,7 +85,7 @@
   font-size: 3.5rem;;
   text-align:center;
   border: 8px dotted red;
-  margin:5px;  
+  margin:5px;
   vertical-align: middle;
 
 }
@@ -100,7 +100,7 @@
   font-size: 3.5rem;;
   text-align:center;
   border: 5px dashed #20c2ff;
-  margin:5px;  
+  margin:5px;
   vertical-align: middle;
 
 }
@@ -115,10 +115,10 @@
   font-size: 3.5rem;
   color: white;
   text-align:center;
-  vertical-align: middle; 
+  vertical-align: middle;
   border: 8px  dotted red;
   margin:5px;
-  
+
 }
 
 .visibleBlackComputerCard {
@@ -131,10 +131,10 @@
   font-size: 3.5rem;
   color: white;
   text-align:center;
-  vertical-align: middle; 
+  vertical-align: middle;
   border: 5px dashed #20c2ff;
   margin:5px;
-  
+
 }
 
 
@@ -148,7 +148,7 @@
   font-size: 3.5rem;;
   text-align:center;
   border: 5px solid #AAA;
-  margin:5px;  
+  margin:5px;
   vertical-align: middle;
   /* box-shadow: 0 4px 8px 0 rgba(255, 255,255, 0.5), 0 6px 20px 0 rgba(255, 255, 255, 0.5); */
 }
@@ -163,10 +163,10 @@
   font-size: 3.5rem;
   color: white;
   text-align:center;
-  vertical-align: middle; 
+  vertical-align: middle;
   border: 5px  solid #AAA;
   margin:5px;
-  
+
   /* box-shadow: 0 8px 20px 0 rgba(255, 255,255, 0.5), 0 6px 20px 0 rgba(255, 255, 255, 0.5); */
 }
 
@@ -174,7 +174,7 @@
 
 .status {
   height:calc(95%/2);
-  
+
 }
 
 
@@ -223,7 +223,7 @@
 .start-btn {
   grid-area: btn;
   background-color: #222;
-  border:2px solid #222; 
+  border:2px solid #222;
   color:#ABCDAB;
   font-size: 1.4rem;
   text-align: center;
@@ -233,7 +233,7 @@
 .start-btn:hover {
   grid-area: btn;
   background-color: #ABCDAB;
-  border:2px solid #ABCDAB; 
+  border:2px solid #ABCDAB;
   color:#222;
   font-size: 1.4rem;
   text-align: center;
@@ -350,7 +350,7 @@
 .continue-btn {
   grid-area: ctn;
   background-color: #222;
-  border:2px solid #222; 
+  border:2px solid #222;
   color:#ABCDAB;
   font-size: 1.4rem;
   text-align: center;
@@ -370,7 +370,7 @@
 .main-btn {
   grid-area: btn;
   background-color: #222;
-  border:2px solid #222; 
+  border:2px solid #222;
   color:#ABCDAB;
   font-size: 1.4rem;
   text-align: center;
@@ -511,7 +511,7 @@
   position: relative;
   font-family: Arial;
   background-color: #222;
-  border:2px solid #222; 
+  border:2px solid #222;
   color:#ABCDAB;
   font-size: 1rem;
   text-align-last:center;
@@ -527,7 +527,7 @@
 .guess-btn {
   grid-area: guess;
   background-color: #222;
-  border:2px solid #222; 
+  border:2px solid #222;
   color:#ABCDAB;
   margin-top: 5%;
   font-size: 1.4rem;
@@ -548,7 +548,7 @@
 .next-btn {
   grid-area: next;
   background-color: #222;
-  border:2px solid #222; 
+  border:2px solid #222;
   color:#ABCDAB;
   margin-top: 5%;
   margin-left: 5%;
@@ -597,7 +597,7 @@
   font-size: 3.5rem;
   text-align:center;
   border: 5px dashed #20c2ff;
-  margin:5px;  
+  margin:5px;
   vertical-align: middle;
 }
 .visibleBlackPlayerCard {
@@ -609,7 +609,7 @@
   font-size: 3.5rem;
   color: white;
   text-align:center;
-  vertical-align: middle; 
+  vertical-align: middle;
   border: 5px  dashed #20c2ff;
   margin:5px;
 }
@@ -657,7 +657,7 @@
   color: white;
   text-align:center;
   border: 5px  solid #AAA;
-  
+
   /* box-shadow: 0 8px 20px 0 rgba(255, 255,255, 0.5), 0 6px 20px 0 rgba(255, 255, 255, 0.5); */
 }
 

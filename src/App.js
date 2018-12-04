@@ -10,7 +10,7 @@ import LoginPage from './LoginPage';
 import RegisterPage from './RegisterPage';
 import { alertActions } from './actions/alerts';
 import { connect } from 'react-redux';
-import PrivateRoute from './utils/routes';
+import WelcomePage from './WelcomePage';
 
 class App extends Component {
   constructor(props) {
@@ -35,7 +35,8 @@ class App extends Component {
               <div className={`alert ${alert.type}`}>{alert.message}</div>
             }
             <Switch>
-              <Route exact path="/" component={Manual} />
+              <Route exact path="/" component={WelcomePage} />
+              <Route path="/manual" component={Manual} />
               <Route path="/game" component={Game} />
               <Route path="/leaderboard" component={LeaderBoard} />
               <Route path="/login" component={LoginPage} />

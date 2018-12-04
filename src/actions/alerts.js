@@ -5,7 +5,7 @@ const success = (message) => {
 }
 
 const error = (message) => {
-  return { type: types.ERROR ,message };
+  return { type: types.ERROR, message };
 }
 
 const clear = () => {
