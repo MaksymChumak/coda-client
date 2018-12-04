@@ -13,6 +13,7 @@ export const login = (username, password) => {
                 user => {
                     dispatch(success(user));
                     history.push('/manual');
+                    dispatch(alertActions.success('Login successful'));
                 },
                 error => {
                     dispatch(alertActions.error(error.toString()));
@@ -39,7 +40,7 @@ export const register = (user) => {
         .then(
             user => {
                 dispatch(success());
-                history.push('/');
+                history.push('/manual');
                 dispatch(alertActions.success('Registration successful'));
             },
             error => {

@@ -12,16 +12,15 @@ function login(username, password) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })
     };
-    console.log(apiUrl)
     return fetch(`${apiUrl}/login`, requestOptions)
         .then(handleResponse)
         .then(user => {
             // login successful if there's a jwt token in the response
             if (user.token) {
+              console.log("Token!")
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('user', JSON.stringify(user));
             }
-
             return user;
         });
 }
@@ -41,13 +40,14 @@ function register(user) {
     return fetch(`${apiUrl}/register`, requestOptions).then(handleResponse);
 }
 
-
+// return user in login
 function handleResponse(response) {
+  console.log(response)
     return response.text().then(text => {
-        const data = text && JSON.parse(text);
+        const data = text;
         if (!response.ok) {
-            if (response.status === 401) {
-                // auto logout if 401 response returned from api
+            if (response.status === 400) {
+                // auto logout if 400 response returned from api
                 logout();
             }
 
