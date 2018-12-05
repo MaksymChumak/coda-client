@@ -50,7 +50,7 @@ class LoginPage extends React.Component {
               {submitted && !username &&
                 <div className="help-block">Username is required</div>
               }
-              <input placeholder="password" className="password" name="password" onChange={this.handleChange} />
+              <input placeholder="password" className="password" type="password" name="password" onChange={this.handleChange} />
               {submitted && !password &&
                 <div className="help-block">Password is required</div>
               }

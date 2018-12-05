@@ -42,10 +42,6 @@
 .logo {
   position: relative;
   text-align: center;
-  background-image: url(./LOGO.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
   font:16px Arial, Helvetica, sans-serif;
   float: left;
   background-position-x: 10px;

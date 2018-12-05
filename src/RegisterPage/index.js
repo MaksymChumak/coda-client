@@ -53,7 +53,7 @@ class RegisterPage extends React.Component {
                 {submitted && !user.username &&
                   <div className="help-block">Username is required</div>
                 }
-                <input placeholder="password" className="password" name="password" onChange={this.handleChange} />
+                <input placeholder="password" type="password" className="password" name="password" onChange={this.handleChange} />
                 {submitted && !user.password &&
                   <div className="help-block">Password is required</div>
                 }
